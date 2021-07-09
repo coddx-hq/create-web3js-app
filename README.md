@@ -1,8 +1,6 @@
-# create-web3js-app
+# Create Web3js App
 
-# create-web3js-app
-
-> create-web3js-app command-line tool.
+Command line to create a Web3 App.
 
 ## Install
 
@@ -13,17 +11,16 @@ $ npm install --global create-web3js-app
 ## Usage
 
 ```
-$ create-web3js-app --help
+$ npx create-web3js-app appname
+$ cd appname
+$ yarn
 
-  Usage
-    $ create-web3js-app [input]
-
-  Options
-    --postfix  Lorem ipsum  [Default: rainbows]
-
-  Examples
-    $ cli-name
-    unicorns & rainbows
-    $ cli-name ponies
-    ponies & rainbows
+Help:
+$ npx create-web3js-app --help
 ```
+
+## Contribution
+
+- If something doesn't work, please [file an issue](https://github.com/coddx-hq/create-web3js-app/issues).
+- Please use Github Pull Request.
+- All contributions are welcome!
