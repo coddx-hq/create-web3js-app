@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && npm run cp-libs",
+    "cp-libs": "cp ../tools/browserified-libs/browserified-libs.js ./dist/",
     "serve": "vite preview"
   },
   "dependencies": {
@@ -22,10 +23,13 @@
     "@web3-react/trezor-connector": "^6.1.9",
     "@web3-react/walletconnect-connector": "^6.2.0",
     "@web3-react/walletlink-connector": "^6.2.3",
-    "Buffer": "^0.0.0",
+    "buffer": "^6.0.3",
     "cross-env": "^7.0.3",
+    "events": "^3.3.0",
+    "process": "^0.11.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "util": "^0.12.4",
     "web3": "^1.4.0"
   },
   "devDependencies": {

@@ -12,5 +12,8 @@ export default defineConfig({
       zlib: 'browserify-zlib',
       util: 'util'
     }
+  },
+  build: {
+    chunkSizeWarningLimit: 4000
   }
 });
