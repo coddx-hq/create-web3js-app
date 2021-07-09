@@ -2,6 +2,6 @@ import test from 'ava';
 import execa from 'execa';
 
 test('main', async (t) => {
-  const { stdout } = await execa('./cli.js', ['ponies']);
-  t.is(stdout.indexOf('version') >= 0, true);
+  const { stdout } = await execa('./cli.js', ['name']);
+  t.is(stdout.indexOf('Version') >= 0, true);
 });
