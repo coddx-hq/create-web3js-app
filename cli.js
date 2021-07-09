@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 import meow from 'meow';
-import { readFile } from 'fs/promises';
-// import createWeb3jsApp from 'create-web3js-app';
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
+const packageJson = require('./package.json');
 
 const cli = meow(
   `
@@ -27,9 +29,5 @@ const cli = meow(
   }
 );
 
-async function init() {
-  const packageJson = JSON.parse(await readFile(new URL('./package.json', import.meta.url)));
-  console.log(`version: ${packageJson.version}`);
-}
-init();
+console.log(`version: ${packageJson.version}`);
 // console.log(moduleName(cli.input[0] || "unicorns", cli.flags));
