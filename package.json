@@ -1,6 +1,6 @@
 {
   "name": "create-web3js-app",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "create-web3js-app command-line tool.",
   "license": "MIT",
   "repository": "https://github.com/coddx-hq/create-web3js-app",
@@ -19,7 +19,8 @@
     "test": "npx rimraf testdir && ava"
   },
   "files": [
-    "cli.js"
+    "cli.js",
+    "/template-vite-web3-react-ts"
   ],
   "keywords": [
     "create-web3js-app",
