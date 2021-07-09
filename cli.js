@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import meow from "meow";
+import meow from 'meow';
 import { readFile } from 'fs/promises';
 // import createWeb3jsApp from 'create-web3js-app';
 
@@ -20,16 +20,16 @@ const cli = meow(
   {
     flags: {
       postfix: {
-        type: "string",
-        default: "rainbows",
-      },
-    },
+        type: 'string',
+        default: 'rainbows'
+      }
+    }
   }
 );
 
 async function init() {
   const packageJson = JSON.parse(await readFile(new URL('./package.json', import.meta.url)));
-  console.log(`version: ${packageJson.version}`)
+  console.log(`version: ${packageJson.version}`);
 }
 init();
 // console.log(moduleName(cli.input[0] || "unicorns", cli.flags));
