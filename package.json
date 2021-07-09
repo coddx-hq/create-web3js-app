@@ -1,0 +1,39 @@
+{
+  "name": "create-web3js-app",
+  "version": "0.0.1",
+  "description": "create-web3js-app CLI",
+  "license": "MIT",
+  "repository": "https://github.com/coddx-hq/create-web3js-app",
+  "author": {
+    "name": "Duc Nguyen",
+    "url": "https://github.com/ngduc"
+  },
+  "type": "module",
+  "bin": {
+    "create-web3js-app": "cli.js"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "cli.js"
+  ],
+  "keywords": [
+    "create-web3js-app",
+    "web3",
+    "web3js",
+    "boilerplate"
+  ],
+  "dependencies": {
+    "meow": "^9.0.0",
+    "create-web3js-app": "^0.0.0"
+  },
+  "devDependencies": {
+    "ava": "^3.15.0",
+    "execa": "^5.0.0",
+    "xo": "^0.37.0"
+  }
+}
