@@ -29,5 +29,10 @@ const cli = meow(
   }
 );
 
-console.log(`version: ${packageJson.version}`);
-// console.log(moduleName(cli.input[0] || "unicorns", cli.flags));
+console.log(`Version: ${packageJson.version}`);
+if (!cli.input[0]) {
+  console.log('ERROR: missing project name.');
+  process.exit(1);
+}
+console.log(`Creating web3 app "${cli.input[0]}"`);
+// console.log(cli.input[0] || 'unicorns', cli.flags);
