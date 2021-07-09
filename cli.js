@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import meow from 'meow';
+import { existsSync, mkdirSync } from 'fs';
 import { createRequire } from 'module';
 
 const require = createRequire(import.meta.url);
@@ -27,9 +28,24 @@ const cli = meow(
 );
 
 console.log(`Version: ${packageJson.version}`);
-if (!cli.input[0]) {
-  console.log('ERROR: missing project name.');
-  process.exit(1);
+
+async function init() {
+  const [name] = cli.input;
+
+  if (!name) {
+    console.log('ERROR: missing project name.');
+    process.exit(1);
+  }
+  if (existsSync(name)) {
+    console.log('ERROR: directory already exists.');
+    process.exit(1);
+  }
+  console.log(`Creating web3 app "${name}"`);
+  // console.log(name || 'unicorns', cli.flags);
+
+  mkdirSync(name);
 }
-console.log(`Creating web3 app "${cli.input[0]}"`);
-// console.log(cli.input[0] || 'unicorns', cli.flags);
+
+init().catch((e) => {
+  console.error(e);
+});
