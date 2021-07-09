@@ -8,16 +8,13 @@ const packageJson = require('./package.json');
 const cli = meow(
   `
 	Usage
-	  $ create-web3js-app [input]
+	  $ create-web3js-app <name>
 
 	Options
 	  --postfix  Lorem ipsum  [Default: rainbows]
 
 	Examples
-	  $ cli-name
-	  unicorns & rainbows
-	  $ cli-name ponies
-	  ponies & rainbows
+	  $ create-web3js-app my-app
 `,
   {
     flags: {

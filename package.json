@@ -1,7 +1,7 @@
 {
   "name": "create-web3js-app",
-  "version": "0.0.7",
-  "description": "create-web3js-app CLI",
+  "version": "0.0.8",
+  "description": "create-web3js-app command-line tool.",
   "license": "MIT",
   "repository": "https://github.com/coddx-hq/create-web3js-app",
   "author": {
