@@ -15,8 +15,6 @@ $ npm install --global create-web3js-app
 
 ```
 $ npx create-web3js-app appname
-$ cd appname
-$ yarn
 
 Help:
 $ npx create-web3js-app --help
