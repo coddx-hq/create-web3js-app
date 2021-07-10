@@ -5,20 +5,13 @@ Command line to create a Web3 App. Features:
 - React, Typescript, Web3-React, Metamask.
 - Backend: NodeJS [vercel-express](https://github.com/ngduc/vercel-express)
 
-## Install
-
-```
-$ npm install --global create-web3js-app
-```
-
 ## Usage
 
 ```
 $ npx create-web3js-app appname
-
-Help:
-$ npx create-web3js-app --help
 ```
+
+<img src="./docs/screenshot-01.png">
 
 ## Contribution
 

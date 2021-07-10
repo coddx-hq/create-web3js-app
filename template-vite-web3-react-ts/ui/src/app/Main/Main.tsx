@@ -153,20 +153,19 @@ function MyComponent() {
   const injectedConnector = connectorsByName['Injected'];
   const walletConnected = injectedConnector === connector;
   const onPayClick = () => {
-    library
-      .send('eth_sendTransaction', [
-        {
-          from: account,
-          to: TO_WALLET,
-          value: web3.utils.toHex(web3.utils.toWei('0.01', 'ether')),
-          gasPrice: '0x0000001F6EA08600',
-          gas: '0x0001ADB0'
-        }
-      ])
-      // .then((tid) => {
-      //   setTransactionId(tid);
-      // });
-  }
+    library.send('eth_sendTransaction', [
+      {
+        from: account,
+        to: TO_WALLET,
+        value: web3.utils.toHex(web3.utils.toWei('0.01', 'ether')),
+        gasPrice: '0x0000001F6EA08600',
+        gas: '0x0001ADB0'
+      }
+    ]);
+    // .then((tid) => {
+    //   setTransactionId(tid);
+    // });
+  };
 
   return (
     <div className="ml-2 mt-4">
@@ -216,13 +215,7 @@ function MyComponent() {
               )}
               <span className="ml-2 mr-2">{active ? '🟢' : error ? '🔴' : '🟠'}</span>
 
-              {walletConnected && (
-                <button
-                  onClick={onPayClick}
-                >
-                  ➤ Send Payment
-                </button>
-              )}
+              {walletConnected && <button onClick={onPayClick}>➤ Send Payment</button>}
             </div>
           </div>
         </div>

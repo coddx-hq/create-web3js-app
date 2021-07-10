@@ -1,5 +1,7 @@
 # Vite-web3-react-ts
 
+Created by [create-web3js-app](https://github.com/coddx-hq/create-web3js-app)
+
 ## Requirements
 
 - NodeJS
