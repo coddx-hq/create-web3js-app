@@ -12,7 +12,7 @@ const __dirname = path.dirname(__filename);
 
 const renameFiles = {
   _gitignore: '.gitignore',
-  'web/_gitignore': 'web/.gitignore'
+  'ui/_gitignore': 'ui/.gitignore'
 };
 
 function copy(src, dest) {
@@ -89,11 +89,11 @@ async function init() {
     write(name, file);
   }
 
-  const pkg = require(path.join(templateDir, `web/package.json`));
+  const pkg = require(path.join(templateDir, `ui/package.json`));
   pkg.name = name;
-  write(name, 'web/package.json', JSON.stringify(pkg, null, 2));
+  write(name, 'ui/package.json', JSON.stringify(pkg, null, 2));
 
-  console.log(`\nDone. Now run:\n$ cd ${name}/web\n$ yarn`);
+  console.log(`\nDone. Now run:\n$ cd ${name}`);
 }
 
 init().catch((e) => {
