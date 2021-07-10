@@ -8,7 +8,8 @@
     "clean": "npx hardhat clean",
     "compile": "npx hardhat compile",
     "test": "npx hardhat test",
-    "coverage": "npm run build && npx hardhat coverage --temp artifacts --network coverage"
+    "coverage": "npm run build && npx hardhat coverage --temp artifacts --network coverage",
+    "deploy": "cross-env dotenv -e .env.example npx hardhat run --network rinkeby scripts/deploy.ts"
   },
   "repository": {
     "type": "git",
@@ -32,7 +33,9 @@
     "@types/node": "^15.0.3",
     "chai": "^4.3.4",
     "chai-as-promised": "^7.1.1",
+    "cross-env": "^7.0.3",
     "dotenv": "^9.0.2",
+    "dotenv-cli": "^4.0.0",
     "ethereum-waffle": "^3.3.0",
     "ethers": "^5.1.4",
     "hardhat": "^2.2.1",
