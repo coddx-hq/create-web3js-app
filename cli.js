@@ -27,6 +27,9 @@ function copy(src, dest) {
 function copyDir(srcDir, destDir) {
   mkdirSync(destDir, { recursive: true });
   for (const file of readdirSync(srcDir)) {
+    if (['node_modules', 'cache', 'build', 'dist', 'logs', '.vercel'].indexOf(file) >= 0) {
+      continue;
+    }
     const srcFile = path.resolve(srcDir, file);
     const destFile = path.resolve(destDir, file);
     copy(srcFile, destFile);
@@ -85,7 +88,9 @@ async function init() {
   };
 
   const files = readdirSync(templateDir);
-  for (const file of files.filter((f) => f !== 'package.json')) {
+  for (const file of files.filter((f) => {
+    return f !== 'package.json';
+  })) {
     write(name, file);
   }
 
