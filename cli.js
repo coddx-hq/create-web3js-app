@@ -27,7 +27,6 @@ function copy(src, dest) {
 function copyDir(srcDir, destDir) {
   mkdirSync(destDir, { recursive: true });
   for (const file of readdirSync(srcDir)) {
-    console.log('file', file);
     if (['node_modules', 'cache', 'build', 'dist', 'logs', '.vercel', '.env'].indexOf(file) >= 0) {
       continue;
     }
