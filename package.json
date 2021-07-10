@@ -1,6 +1,6 @@
 {
   "name": "create-web3js-app",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "create-web3js-app command-line tool.",
   "license": "MIT",
   "repository": "https://github.com/coddx-hq/create-web3js-app",
@@ -20,7 +20,7 @@
   },
   "files": [
     "cli.js",
-    "/template-vite-web3-react-ts"
+    "/template-web3-react-express-hardhat-ts"
   ],
   "keywords": [
     "create-web3js-app",

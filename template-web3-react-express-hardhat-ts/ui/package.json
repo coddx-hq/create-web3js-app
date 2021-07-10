@@ -1,5 +1,5 @@
 {
-  "name": "template-vite-web3-react-ts",
+  "name": "template-web3-react-express-hardhat-ts",
   "version": "0.0.1",
   "scripts": {
     "dev": "vite",

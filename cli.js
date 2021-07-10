@@ -27,7 +27,8 @@ function copy(src, dest) {
 function copyDir(srcDir, destDir) {
   mkdirSync(destDir, { recursive: true });
   for (const file of readdirSync(srcDir)) {
-    if (['node_modules', 'cache', 'build', 'dist', 'logs', '.vercel'].indexOf(file) >= 0) {
+    console.log('file', file);
+    if (['node_modules', 'cache', 'build', 'dist', 'logs', '.vercel', '.env'].indexOf(file) >= 0) {
       continue;
     }
     const srcFile = path.resolve(srcDir, file);
@@ -75,7 +76,7 @@ async function init() {
 
   mkdirSync(name);
 
-  const template = 'vite-web3-react-ts';
+  const template = 'web3-react-express-hardhat-ts';
   const templateDir = path.join(__dirname, `template-${template}`);
 
   const write = (root, file, content) => {
